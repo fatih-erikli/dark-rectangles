@@ -162,8 +162,7 @@ function App() {
           ref={transformableGroupRef}
         >
           <rect width={width-700} fill="rgb(40, 40, 40)" height={height-200} x={100} y={100} />
-          <rect width={300} fill="magenta" height={250} x={width-500} y={100} />
-          <rect width={300} fill="rgb(40, 40, 40)" height={250} x={width-500} y={height-350} />
+          <rect width={300} fill="rgb(40, 40, 40)" height={250} x={width-500} y={100} />
         </g>
       </svg>
       )}

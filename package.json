@@ -1,5 +1,6 @@
 {
-  "name": "mockup-designer",
+  "name": "black-square",
+  "homepage": "https://fatih-erikli.github.io/black-square",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,5 +40,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
   }
 }

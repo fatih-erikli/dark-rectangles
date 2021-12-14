@@ -41,18 +41,28 @@ function App() {
   const svgRef = useRef<SVGSVGElement>(null);
   const transformableGroupRef = useRef<SVGGraphicsElement>(null);
   useEffect(() => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
+    setSize();
     setReadyToRender(true);
   }, []);
+
+  const setSize = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
 
   useEffect(() => {
     if (svgRef.current) {
       groupTransform = svgRef.current.createSVGMatrix();
+      
       svgRef.current.addEventListener('wheel', onWheel, {
         passive: false,
       });
     }
+
+    window.addEventListener('resize', () => {
+      setSize();
+    });
+
     document.addEventListener('gesturestart', (event) => {
       event.preventDefault();
       
@@ -152,7 +162,8 @@ function App() {
           ref={transformableGroupRef}
         >
           <rect width={width-700} fill="rgb(40, 40, 40)" height={height-200} x={100} y={100} />
-          <rect width={300} fill="rgb(40, 40, 40)" height={300} x={width-500} y={100} />
+          <rect width={300} fill="magenta" height={250} x={width-500} y={100} />
+          <rect width={300} fill="rgb(40, 40, 40)" height={250} x={width-500} y={height-350} />
         </g>
       </svg>
       )}

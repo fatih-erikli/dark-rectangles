@@ -1,4 +1,4 @@
-### Zoomable and pannable
+### Zoomable and pannable based document
 
 I tried to implement Figma's zoomable and pannable area and I did.
 
